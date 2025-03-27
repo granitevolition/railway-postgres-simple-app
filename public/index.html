@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway PostgreSQL App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Railway PostgreSQL Demo</h1>
+        
+        <div class="card">
+            <h2>Add a New Person</h2>
+            <form id="personForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="0" max="150" required>
+                </div>
+                
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+        
+        <div class="card">
+            <h2>Stored People</h2>
+            <div id="message" class="message"></div>
+            <div id="loading" class="loading">Loading...</div>
+            <table id="peopleTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Created At</th>
+                    </tr>
+                </thead>
+                <tbody id="peopleList"></tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
